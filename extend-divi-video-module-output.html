@@ -1,0 +1,12 @@
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+/* adds ‘&rel=0’ to end of all YouTube video URL’s to prevent displaying related videos, provide the embedded video with extended privacy protection and remove video title.
+Make sure you add a custom class name (here: specialyoutube) to your Divi Video Modules that will contain YouTube videos. */
+if($('.specialyoutube').length){
+$('.specialyoutube iframe').attr( 'src', function( i, val ) {
+	val = val.replace('www.youtube.com', 'www.youtube-nocookie.com');
+    return val + '&rel=0&amp;showinfo=0';
+});
+}
+});
+</script>
